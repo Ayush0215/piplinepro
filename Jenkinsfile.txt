@@ -1,0 +1,11 @@
+node {
+    checkout scm
+
+    docker.withRegistry('https://registry.hub.docker.com', '9382815a-ee61-4a98-8a2f-ef2c81e61e96') {
+
+        def customImage = docker.build("newnodebtech:${env.BUILD_ID}")
+
+        /* Push the container to the custom Registry */
+        customImage.push()
+    }
+}
