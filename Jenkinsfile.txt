@@ -1,7 +1,7 @@
 node {
     checkout scm
 
-    docker.withRegistry('https://registry.hub.docker.com', '9382815a-ee61-4a98-8a2f-ef2c81e61e96') {
+    docker.withRegistry('https://registry.hub.docker.com', '1530dacb-f1b7-4bea-bf81-dc909ef1744d') {
 
         def customImage = docker.build("ayushgoud1502/btechproject")
 
